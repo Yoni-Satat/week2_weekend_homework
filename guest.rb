@@ -6,4 +6,8 @@ class Guest
     @name = name
     @money = money
   end
+
+  def spend(amount)
+    @money -= amount
+  end
 end
