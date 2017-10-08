@@ -1,3 +1,6 @@
+# require('pry')
+# binding.pry()
+
 class Guest
 
   attr_reader(:name, :money)
