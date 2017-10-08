@@ -4,7 +4,7 @@ require_relative('../guest.rb')
 
 class TestGuest < MiniTest::Test
   def setup()
-    @guest = Guest.new('Yoni', 10)
+    @guest = Guest.new('Yoni', 10, "It's a sin")
   end
 
   def test_guest_has_name
@@ -21,6 +21,11 @@ class TestGuest < MiniTest::Test
     @guest.spend(10)
     actual = @guest.money()
     assert_equal(0, actual)
+  end
+
+  def test_guest_favourite_song
+    actual = @guest.fav_song()
+    assert_equal("It's a sin", actual)
   end
 
 end
