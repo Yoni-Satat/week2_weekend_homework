@@ -14,4 +14,10 @@ class Guest
   def spend(amount)
     @money -= amount
   end
+
+  def cheer(fav_song)
+    if (fav_song == "It's a sin")
+      return "Whooo"
+    end
+  end
 end

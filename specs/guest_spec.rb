@@ -23,9 +23,13 @@ class TestGuest < MiniTest::Test
     assert_equal(0, actual)
   end
 
-  def test_guest_favourite_song
+  def test_guest_has_favourite_song
     actual = @guest.fav_song()
     assert_equal("It's a sin", actual)
+  end
+
+  def test_guest_can_cheer_for_fav_song
+    assert_equal("Whooo", @guest.cheer(@guest.fav_song))
   end
 
 end
